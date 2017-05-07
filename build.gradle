@@ -1,0 +1,34 @@
+group 'PAT_Monitoring_Approaches'
+version '1.0-SNAPSHOT'
+
+buildscript {
+	repositories {
+		maven {
+			url "https://maven.eveoh.nl/content/repositories/releases"
+		}
+	}
+
+	dependencies {
+		classpath "nl.eveoh:gradle-aspectj:1.6"
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+project.ext {
+	aspectjVersion = '1.8.4'
+}
+
+apply plugin: 'java'
+// https://github.com/eveoh/gradle-aspectj
+apply plugin: 'aspectj'
+
+sourceCompatibility = 1.8
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+	compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.8.2'
+	compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.8.2'
+}
