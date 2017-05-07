@@ -218,8 +218,6 @@ hs_err_pid*
 # .idea/misc.xml
 # *.ipr
 
-.idea
-
 # Sonarlint plugin
 
 ### Gradle ###
